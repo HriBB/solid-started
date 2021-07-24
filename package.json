@@ -1,0 +1,29 @@
+{
+  "name": "solid-started",
+  "type": "module",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start",
+    "static:build": "STATIC=true solid-start build",
+    "static:start": "STATIC=true solid-start start"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "graphql-request": "^3.4.0",
+    "swiper": "^6.8.0"
+  },
+  "devDependencies": {
+    "solid-app-router": "^0.1.2",
+    "solid-js": "^1.0.4",
+    "solid-meta": "^0.27.0",
+    "solid-start": "next",
+    "solid-start-node": "next",
+    "solid-start-static": "next",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.3",
+    "vite-plugin-windicss": "^1.2.5"
+  }
+}
