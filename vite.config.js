@@ -7,7 +7,7 @@ const STATIC = process.env['STATIC'] === 'true' || false
 export default defineConfig({
   plugins: [
     solid({
-      adapter: STATIC ? 'solid-start-static' : 'solid-start-node',
+      adapter: `solid-start-${STATIC ? 'static' : 'node'}`,
       ssr: true,
       preferStreaming: false,
       prerenderRoutes: [],

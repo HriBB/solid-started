@@ -1,4 +1,4 @@
-import { Button } from '~/components/ui'
+import { PrimaryButton } from '~/components/ui'
 
 type Props = {
   title: string
@@ -23,7 +23,7 @@ const GettingStartedItem = (props: Props) => {
       </div>
       <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
         <div class="flex items-center justify-start">
-          <Button primary>{props.action}</Button>
+          <PrimaryButton>{props.action}</PrimaryButton>
         </div>
       </div>
     </div>

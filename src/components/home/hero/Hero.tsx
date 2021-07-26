@@ -1,4 +1,4 @@
-import { Button } from '~/components/ui'
+import { WhiteButton } from '~/components/ui'
 import Background from './Background'
 import heroImage from './hero.png'
 
@@ -18,7 +18,7 @@ const Hero = () => {
               Sub-hero message, not too long and not too short. Make it just
               right!
             </p>
-            <Button class="mx-auto md:mx-0 z-10">Subscribe</Button>
+            <WhiteButton class="mx-auto md:mx-0 z-10">Subscribe</WhiteButton>
           </div>
           <div class="w-full md:w-3/5 py-6 text-center">
             <img class="w-full md:w-4/5 z-50" src={heroImage} />

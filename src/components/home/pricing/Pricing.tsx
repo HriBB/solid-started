@@ -1,4 +1,4 @@
-import { Button, Title } from '~/components/ui'
+import { PrimaryButton, Title } from '~/components/ui'
 
 const Pricing = () => {
   return (
@@ -23,9 +23,7 @@ const Pricing = () => {
                 <span class="text-base">for one user</span>
               </div>
               <div class="flex items-center justify-center">
-                <Button primary class="my-6">
-                  Sign Up
-                </Button>
+                <PrimaryButton class="my-6">Sign Up</PrimaryButton>
               </div>
             </div>
           </div>
@@ -46,9 +44,7 @@ const Pricing = () => {
                 <span class="text-base">/ per user</span>
               </div>
               <div class="flex items-center justify-center">
-                <Button primary class="my-6">
-                  Sign Up
-                </Button>
+                <PrimaryButton class="my-6">Sign Up</PrimaryButton>
               </div>
             </div>
           </div>
@@ -69,9 +65,7 @@ const Pricing = () => {
                 <span class="text-base">/ per user</span>
               </div>
               <div class="flex items-center justify-center">
-                <Button primary class="my-6">
-                  Sign Up
-                </Button>
+                <PrimaryButton class="my-6">Sign Up</PrimaryButton>
               </div>
             </div>
           </div>
