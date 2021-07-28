@@ -3,16 +3,17 @@ import { JSX } from 'solid-js'
 type Props = {
   children?: JSX.Element
   class?: string
+  primary?: boolean
 }
 
-const WhiteButton = (props: Props) => {
+const Button = (props: Props) => {
   return (
     <button
       font="bold"
       border="rounded-full"
       p="x-8 y-4"
-      bg="white"
-      text="gray-800"
+      bg={props.primary ? 'gradient' : 'white'}
+      text={props.primary ? 'white' : 'pink-800'}
       transition="scale duration-300 ease-in-out"
       transform="~"
       hover="scale-105"
@@ -23,4 +24,4 @@ const WhiteButton = (props: Props) => {
   )
 }
 
-export default WhiteButton
+export default Button

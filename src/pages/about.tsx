@@ -1,8 +1,10 @@
+import { Content, Title } from '~/components/ui'
+
 export default function About() {
   return (
-    <main class="gradient">
-      <h1>About world!</h1>
+    <Content>
+      <Title>About world!</Title>
       <p>This is the about page.</p>
-    </main>
+    </Content>
   )
 }

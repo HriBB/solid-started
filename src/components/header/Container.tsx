@@ -7,7 +7,7 @@ type Props = {
 const HeaderContainer = (props: Props) => {
   return (
     <div
-      class="container"
+      container="~"
       w="full"
       m="x-auto"
       p="y-2"

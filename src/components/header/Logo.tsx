@@ -1,25 +1,24 @@
+import { Link } from 'solid-app-router'
 import PlaneIcon from './PlaneIcon'
 
 type Props = {
-  scrolled: () => boolean
-  opened: () => boolean
+  raised?: () => boolean
+  onClick?: () => void
 }
 
 const HeaderLogo = (props: Props) => {
   return (
     <div class="pl-4 flex items-center">
-      <a
+      <Link
         href="/"
-        text="3xl no-underline"
         hover:text="no-underline"
         font="bold"
-        class={
-          props.scrolled() || props.opened() ? 'text-gray-800' : 'text-white'
-        }
+        text={`3xl no-underline ${props.raised() ? 'gray-800' : 'white'}`}
+        onClick={props.onClick}
       >
         <PlaneIcon class="mr-3 h-8 fill-current inline" />
         CLIMBING TALES
-      </a>
+      </Link>
     </div>
   )
 }

@@ -1,4 +1,3 @@
-// @refresh reload
 import { Links, Meta, Outlet, Scripts } from 'solid-start/components'
 import { Header } from './components/header'
 import { Footer } from './components/footer'
@@ -18,8 +17,8 @@ export default function Root({ Start }) {
         <body>
           <Header />
           <Outlet />
-          <Scripts />
           <Footer />
+          <Scripts />
         </body>
       </html>
     </Start>

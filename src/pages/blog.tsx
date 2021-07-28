@@ -1,8 +1,16 @@
+import { Resource } from 'solid-js'
+import { useData } from 'solid-app-router'
+
+import { PostList } from '~/components/post'
+import { Content } from '~/components/ui'
+import { Data } from './blog.data'
+
 export default function Blog() {
+  const data = useData<Resource<Data>>()
   return (
-    <main class="gradient">
-      <h1>Blog</h1>
-      <p>This is the blog page.</p>
-    </main>
+    <Content>
+      {JSON.stringify(data(), null, 2)}
+      {/*<PostList data={data} />*/}
+    </Content>
   )
 }

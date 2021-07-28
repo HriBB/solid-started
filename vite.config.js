@@ -9,7 +9,7 @@ export default defineConfig({
     solid({
       adapter: `solid-start-${STATIC ? 'static' : 'node'}`,
       ssr: true,
-      preferStreaming: false,
+      preferStreaming: STATIC ? false : true,
       prerenderRoutes: [],
     }),
     WindiCSS.default({

@@ -1,4 +1,5 @@
-import { createSignal, onMount, onCleanup } from 'solid-js'
+import { createSignal, onMount, onCleanup, createMemo } from 'solid-js'
+import { useLocation, useData } from 'solid-app-router'
 import Nav from './Nav'
 import Logo from './Logo'
 import Menu from './Menu'
@@ -13,26 +14,36 @@ const Header = () => {
   const [opened, setOpened] = createSignal(false)
   const [scrolled, setScrolled] = createSignal(isScrolled())
 
-  const handleClick = () => setOpened(!opened())
-
+  const handleLink = () => setOpened(false)
+  const handleMenu = () => setOpened(!opened())
   const handleScroll = () => {
     if (isScrolled() !== scrolled()) {
       setScrolled(isScrolled())
     }
   }
 
+  const location = useLocation()
+  const home = () => location.pathname === '/'
+  const raised = createMemo(() => !home() || scrolled() || opened())
+
   onMount(() => document.addEventListener('scroll', handleScroll))
   onCleanup(() => document.removeEventListener('scroll', handleScroll))
 
   return (
-    <Nav scrolled={scrolled} opened={opened}>
+    <Nav raised={raised}>
       <Container>
-        <Logo scrolled={scrolled} opened={opened} />
-        <MenuButton onClick={handleClick} scrolled={scrolled} opened={opened} />
+        <Logo raised={raised} onClick={handleLink} />
+        <MenuButton raised={raised} onClick={handleMenu} />
         <Menu opened={opened}>
-          <MenuLink href={'/'}>Home</MenuLink>
-          <MenuLink href={'/blog'}>Blog</MenuLink>
-          <MenuLink href={'/about'}>About</MenuLink>
+          <MenuLink href={'/'} raised={raised} onClick={handleLink}>
+            Home
+          </MenuLink>
+          <MenuLink href={'/blog'} raised={raised} onClick={handleLink}>
+            Blog
+          </MenuLink>
+          <MenuLink href={'/about'} raised={raised} onClick={handleLink}>
+            About
+          </MenuLink>
         </Menu>
       </Container>
       <hr m="y-0" p="y-0" border="b gray-100" opacity="25" />

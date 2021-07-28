@@ -1,9 +1,8 @@
 import { JSX } from 'solid-js'
 
 type Props = {
+  raised?: () => boolean
   children?: JSX.Element
-  scrolled: () => boolean
-  opened: () => boolean
 }
 
 const HeaderNav = (props: Props) => {
@@ -12,8 +11,8 @@ const HeaderNav = (props: Props) => {
       pos="fixed top-0"
       w="full"
       z="30"
-      bg={props.scrolled() || props.opened() ? 'white' : 'transparent'}
-      shadow={props.scrolled() ? 'md' : 'none'}
+      bg={props.raised() ? 'white' : 'transparent'}
+      shadow={props.raised() ? 'md' : 'none'}
     >
       {props.children}
     </nav>

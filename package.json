@@ -6,7 +6,8 @@
     "build": "solid-start build",
     "start": "solid-start start",
     "static:build": "STATIC=true solid-start build",
-    "static:start": "STATIC=true solid-start start"
+    "static:start": "STATIC=true solid-start start",
+    "clean": "rimraf dist && rimraf .solid"
   },
   "engines": {
     "node": ">=12"
@@ -16,14 +17,15 @@
     "swiper": "^6.8.0"
   },
   "devDependencies": {
-    "solid-app-router": "^0.1.2",
-    "solid-js": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "solid-app-router": "^0.1.3",
+    "solid-js": "^1.0.5",
     "solid-meta": "^0.27.0",
     "solid-start": "next",
     "solid-start-node": "next",
     "solid-start-static": "next",
     "typescript": "^4.3.5",
     "vite": "^2.4.3",
-    "vite-plugin-windicss": "^1.2.5"
+    "vite-plugin-windicss": "^1.2.6"
   }
 }
