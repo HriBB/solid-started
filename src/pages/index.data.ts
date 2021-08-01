@@ -10,13 +10,11 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 const simulateFetch = async () => {
   console.log('fetch home data')
-
-  const ms = 1000
-  await sleep(ms)
+  await sleep(1000)
   return {
     page: 'home',
     simulateFetch: true,
-    sleep: ms,
+    sleep: 1000,
   }
 }
 

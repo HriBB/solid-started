@@ -7,10 +7,11 @@ type Props = {
 
 const FooterListItem = (props: Props) => {
   return (
-    <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+    <li m="t-2 r-2 md:r-0" display="inline-block md:block">
       <a
         href={props.href}
-        class="no-underline hover:underline text-gray-800 hover:text-pink-500"
+        text="no-underline gray-800"
+        hover:text="underline pink-500"
       >
         {props.children}
       </a>

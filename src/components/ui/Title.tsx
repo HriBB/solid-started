@@ -5,9 +5,9 @@ type Props = {
   color?: 'default' | 'white'
 }
 
-const SectionTitle = (props: Props) => {
+const Title = (props: Props) => {
   return (
-    <div class="w-full mb-4">
+    <div w="full" m="b-4">
       <h1
         w="full"
         m="x-auto y-2"
@@ -29,4 +29,4 @@ const SectionTitle = (props: Props) => {
   )
 }
 
-export default SectionTitle
+export default Title

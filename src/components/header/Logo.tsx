@@ -8,7 +8,7 @@ type Props = {
 
 const HeaderLogo = (props: Props) => {
   return (
-    <div class="pl-4 flex items-center">
+    <div p="l-4" flex="~ items-center">
       <Link
         href="/"
         hover:text="no-underline"

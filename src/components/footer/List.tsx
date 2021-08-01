@@ -5,7 +5,11 @@ type Props = {
 }
 
 const FooterList = (props: Props) => {
-  return <ul class="list-reset mb-6">{props.children}</ul>
+  return (
+    <ul list="reset" m="b-6">
+      {props.children}
+    </ul>
+  )
 }
 
 export default FooterList

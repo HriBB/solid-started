@@ -1,4 +1,4 @@
-const Background = () => {
+const HeroBackground = () => {
   return (
     <svg
       viewBox="0 0 1428 174"
@@ -36,4 +36,4 @@ const Background = () => {
   )
 }
 
-export default Background
+export default HeroBackground

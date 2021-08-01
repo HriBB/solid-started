@@ -16,7 +16,9 @@ export default function Root({ Start }) {
         </head>
         <body>
           <Header />
-          <Outlet />
+          <div min-h="screen">
+            <Outlet />
+          </div>
           <Footer />
           <Scripts />
         </body>

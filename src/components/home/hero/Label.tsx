@@ -4,12 +4,12 @@ type Props = {
   children?: JSX.Element
 }
 
-const FooterListTitle = (props: Props) => {
+const HeroLabel = (props: Props) => {
   return (
-    <p text="uppercase gray-500" md:m="b-6">
+    <p w="full" text="uppercase" font="tracking-loose">
       {props.children}
     </p>
   )
 }
 
-export default FooterListTitle
+export default HeroLabel

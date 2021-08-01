@@ -7,7 +7,7 @@ type Props = {
 
 const HeaderMenuButton = (props: Props) => {
   return (
-    <div class="block lg:hidden pr-4">
+    <div flex="~" align="items-center" lg:display="hidden" p="r-4">
       <button
         p="1"
         flex="~ items-center"
@@ -17,7 +17,7 @@ const HeaderMenuButton = (props: Props) => {
         transform="~"
         transition="scale duration-300 ease-in-out"
         hover="scale-105"
-        text={props.raised() ? 'gray-800' : 'pink-700'}
+        text={props.raised() ? 'gray-800' : 'white'}
         onClick={props.onClick}
       >
         <Icon class="fill-current h-6 w-6" />

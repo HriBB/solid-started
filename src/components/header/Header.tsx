@@ -14,8 +14,8 @@ const Header = () => {
   const [opened, setOpened] = createSignal(false)
   const [scrolled, setScrolled] = createSignal(isScrolled())
 
-  const handleLink = () => setOpened(false)
-  const handleMenu = () => setOpened(!opened())
+  const closeMenu = () => setOpened(false)
+  const toggleMenu = () => setOpened(!opened())
   const handleScroll = () => {
     if (isScrolled() !== scrolled()) {
       setScrolled(isScrolled())
@@ -32,16 +32,16 @@ const Header = () => {
   return (
     <Nav raised={raised}>
       <Container>
-        <Logo raised={raised} onClick={handleLink} />
-        <MenuButton raised={raised} onClick={handleMenu} />
+        <Logo raised={raised} onClick={closeMenu} />
+        <MenuButton raised={raised} onClick={toggleMenu} />
         <Menu opened={opened}>
-          <MenuLink href={'/'} raised={raised} onClick={handleLink}>
+          <MenuLink href={'/'} raised={raised} onClick={closeMenu}>
             Home
           </MenuLink>
-          <MenuLink href={'/blog'} raised={raised} onClick={handleLink}>
+          <MenuLink href={'/blog'} raised={raised} onClick={closeMenu}>
             Blog
           </MenuLink>
-          <MenuLink href={'/about'} raised={raised} onClick={handleLink}>
+          <MenuLink href={'/about'} raised={raised} onClick={closeMenu}>
             About
           </MenuLink>
         </Menu>

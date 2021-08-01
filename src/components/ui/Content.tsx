@@ -6,7 +6,7 @@ type Props = {
 
 const Content = (props: Props) => {
   return (
-    <main container="~" m="x-auto t-20" p="8">
+    <main container="~" m="x-auto t-14" p="8">
       {props.children}
     </main>
   )

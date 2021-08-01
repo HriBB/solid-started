@@ -3,8 +3,8 @@ import Item from './Item'
 
 const GettingStarted = () => {
   return (
-    <section class="bg-white border-b py-8">
-      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+    <section bg="white" border="b" p="y-8">
+      <div container="~" flex="~ wrap" m="x-auto" p="t-4 b-12">
         <Title>Getting Started</Title>
         <Item
           title="GETTING STARTED"

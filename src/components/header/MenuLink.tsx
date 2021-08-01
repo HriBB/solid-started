@@ -10,13 +10,13 @@ type Props = {
 
 const HeaderMenuLink = (props: Props) => {
   return (
-    <li class="mr-3">
+    <li m="r-3">
       <Link
+        href={props.href}
         text={`${props.raised() ? 'gray-800' : 'white'} no-underline`}
-        hover:text="gray-800 underline"
+        hover:text="pink-700 underline"
         p="x-4 y-2"
         display="inline-block"
-        href={props.href}
         onClick={props.onClick}
       >
         {props.children}
