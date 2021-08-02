@@ -19,6 +19,6 @@ const simulateFetch = async () => {
 }
 
 export default function HomeData() {
-  const [data] = createResource(simulateFetch)
+  const [data] = createResource<Data>(simulateFetch)
   return data
 }

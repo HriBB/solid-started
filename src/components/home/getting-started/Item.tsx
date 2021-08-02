@@ -12,7 +12,7 @@ const GettingStartedItem = (props: Props) => {
     <div w="full md:1/3" flex="~ col grow shrink" p="6">
       <div flex="1" shadow="~" bg="white" overflow="hidden" border="rounded">
         <a href="#" flex="~ wrap" text="no-underline hover:no-underline">
-          <p w="full" text="gray-600 xs md:sm" p="x-6">
+          <p w="full" text="gray-600 xs md:sm" p="x-6" m="t-4">
             {props.title}
           </p>
           <div w="full" text="gray-800 xl" font="bold" p="x-6">
